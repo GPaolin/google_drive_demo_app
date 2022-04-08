@@ -88,6 +88,16 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  Future<void> _downloadDriveQR2() async {
+    QRCodeRead qrCodeRead = QRCodeRead();
+    //PARSE STRING -> TO DO
+    qrCodeRead.code = "170-9P117515004";
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => QRViewerWidget(
+            qrcode: qrCodeRead)));
+  }
+
+
   Future<void> _downloadDrive() async {
     setState(() {
       _action = "download file from Google Drive";
@@ -202,11 +212,11 @@ class _MyHomePageState extends State<MyHomePage> {
             //   icon: const Icon(Icons.upload),
             //   iconSize: _mainIconSize,
             // ),
-            // IconButton(
-            //     onPressed: _downloadDrive,
-            //     icon: const Icon(Icons.download),
-            //     iconSize: _mainIconSize,
-            // ),
+            IconButton(
+                onPressed: _downloadDriveQR2,
+                icon: const Icon(Icons.download),
+                iconSize: 70,
+            ),
             const TextField(
               decoration: InputDecoration(
                 focusColor: Colors.blue,
