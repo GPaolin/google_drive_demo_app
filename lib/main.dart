@@ -212,11 +212,11 @@ class _MyHomePageState extends State<MyHomePage> {
             //   icon: const Icon(Icons.upload),
             //   iconSize: _mainIconSize,
             // ),
-            IconButton(
-                onPressed: _downloadDriveQR2,
-                icon: const Icon(Icons.download),
-                iconSize: 70,
-            ),
+            // IconButton(
+            //     onPressed: _downloadDriveQR2,
+            //     icon: const Icon(Icons.download),
+            //     iconSize: 70,
+            // ),
             const TextField(
               decoration: InputDecoration(
                 focusColor: Colors.blue,
@@ -239,6 +239,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
                 // icon: const Icon(Icons.qr_code),
                 // iconSize: 60,
+            ),
+            TextButton(
+                onPressed: _downloadDriveQR2,
+                child: const Text(
+                    'TEST'
+                )
+              // icon: const Icon(Icons.qr_code),
+              // iconSize: 60,
             ),
           ],
         ),
